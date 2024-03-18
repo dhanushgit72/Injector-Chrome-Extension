@@ -1,0 +1,24 @@
+{
+    "name": "Injector",
+    "description": "Inject your custom javascript and css into any browser",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "icons": {
+        "128": "logo.png"
+    },
+    "browser_action": {
+        "default_icon": "logo.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.youtube.com/*",
+                "https://*.google.com/*",
+                "https://*.microsoft.com/*"
+            ],
+            "js": [
+                "app.js"
+            ]
+        }
+    ]
+}
